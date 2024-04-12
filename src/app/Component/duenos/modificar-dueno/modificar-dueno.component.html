@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="inputsForModify">
+    <h1 class="title">Dueno a modificar</h1>
+    <input type="text" placeholder="DNI" [(ngModel)]="dniDuenoFind" />
+    <p *ngIf="errorModifyDueno" class="errorText">
+      {{ errorMensage }}
+    </p>
+    <button id="btn-modify" (click)="findDueno()">Buscar</button>
+    <div class="dataDuenoModify">
+      <p
+        [ngClass]="{ DataFinded: findedDuenoBoolean, '': !findedDuenoBoolean }"
+      >
+        Apellido: {{ dueno?.nombre }}
+      </p>
+      <p
+        [ngClass]="{ DataFinded: findedDuenoBoolean, '': !findedDuenoBoolean }"
+      >
+        Nombre: {{ dueno?.apellido }}
+      </p>
+      <p
+        [ngClass]="{ DataFinded: findedDuenoBoolean, '': !findedDuenoBoolean }"
+      >
+        Seña: {{ dueno?.sena }}
+      </p>
+    </div>
+  </div>
+
+  <div class="newData">
+    <h1>Nuevos datos</h1>
+    <input type="text" placeholder="Apellido" />
+    <input type="text" placeholder="Nombre" />
+    <input type="text" placeholder="Seña" />
+    <button id="btn-modify">Guardar</button>
+  </div>
+</div>

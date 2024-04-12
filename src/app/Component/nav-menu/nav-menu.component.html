@@ -1,0 +1,56 @@
+<div class="container">
+  <button class="button-menuLateral" (click)="toggleSidebar()">
+    <h1
+      class="title"
+      routerLink="/"
+      routerLinkActive="activate"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      CamposLibres
+    </h1>
+  </button>
+  <nav>
+    <ul class="menu-horizontal">
+      <li routerLink="/Animales" routerLinkActive="activate">
+        <button routerLink="/Animales" routerLinkActive="activate">
+          Animales
+        </button>
+        <ul class="menu-vertical">
+          <li><a href="#">Buscar</a></li>
+          <li><a href="#">Historial</a></li>
+        </ul>
+      </li>
+
+      <li routerLink="/Dueños" routerLinkActive="activate">
+        <button routerLink="/Manejo" routerLinkActive="activate">
+          Informes
+        </button>
+        <ul class="menu-vertical">
+          <li><a routerLink="/Manejo/Dueños">Dueños</a></li>
+          <li><a routerLink="/Manejo/Pelajes">Pelajes</a></li>
+        </ul>
+      </li>
+
+      <li routerLink="/Vacunaciones" routerLinkActive="activate">
+        <button routerLink="/Vacunaciones" routerLinkActive="activate">
+          Vacunaciones
+        </button>
+      </li>
+
+      <li routerLink="/Añadir " routerLinkActive="activate">
+        <button routerLink="/Añadir" routerLinkActive="activate">Añadir</button>
+        <ul class="menu-vertical">
+          <li>
+            <a routerLink="/Animales" routerLinkActive="activate">Animal</a>
+          </li>
+          <li>
+            <a routerLink="/Pelajes" routerLinkActive="activate">Pelaje</a>
+          </li>
+          <li>
+            <a routerLink="/Dueños" routerLinkActive="activate">Dueños</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</div>

@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+.container {
+  @apply text-backGround-300 flex border-b-2 backdrop-blur-xl w-full;
+}
+
+nav {
+  @apply w-full  text-2xl flex justify-end 3xl:mr-20 align-middle items-center mr-6;
+}
+
+.title {
+  @apply text-4xl  font-bold justify-start border-b-2;
+}
+
+nav button {
+  @apply m-2 3xl:mr-8 rounded-lg;
+}
+
+.button-menuLateral {
+  @apply h-fit m-3 ml-7;
+}
+
+.activate {
+  @apply font-bold   text-black;
+}
+
+.menu-horizontal {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+.menu-horizontal > li > a {
+  display: block;
+  padding: 10px 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.menu-horizontal > li:hover {
+  background-color: black;
+  @apply rounded-2xl;
+}
+.menu-horizontal > li.activate:hover {
+  background-color: black;
+  @apply font-bold   text-white rounded-2xl;
+}
+.menu-horizontal > li.active > button:hover {
+  background-color: black;
+  @apply font-bold   text-white rounded-2xl;
+}
+.menu-horizontal > li.activate:hover > button {
+  background-color: black;
+  @apply font-bold   text-white rounded-2xl;
+}
+
+.menu-vertical {
+  position: absolute;
+  display: none;
+  list-style: none;
+  width: 120px;
+  background-color: rgba(0, 0, 0, 0.5);
+  @apply rounded-lg;
+}
+.menu-horizontal li:hover .menu-vertical {
+  display: block;
+  @apply text-lg;
+}
+.menu-vertical li:hover {
+  background-color: black;
+  @apply rounded-lg;
+}
+
+.menu-vertical li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  @apply p-4;
+}
+
+#html {
+  margin: auto;
+  padding: 20px;
+  max-width: 900px;
+  background: white;
+}

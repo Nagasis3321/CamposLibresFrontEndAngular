@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body{
+  @media screen and (min-width:1280px) {
+    
+      @apply bg-cover bg-center h-screen;
+        background-image: url('assets/vacaBackGround.jpg');
+  } 
+
+
+
+    @media screen and (max-width: 600px) {
+        /* Estilos para dispositivos móviles */
+        @apply bg-cover bg-center h-screen bg-no-repeat;
+        background-image: url('assets/cow-384628_1920.jpg');
+      }
+      
+
+
+}

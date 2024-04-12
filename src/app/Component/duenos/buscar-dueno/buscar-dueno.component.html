@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="optionFind">
+    <h1 class="titleOpciones">Opciones Busqueda</h1>
+    <input [(ngModel)]="dniFilter" placeholder="DNI" :first-child />
+    <input [(ngModel)]="apellidoFilter" placeholder="Apellido" />
+    <input [(ngModel)]="nombreFilter" placeholder="Nombre" />
+    <input [(ngModel)]="senaFilter" placeholder="Seña" />
+  </div>
+  <div class="tableData">
+    <table>
+      <thead>
+        <tr>
+          <th>DNI</th>
+          <th>Apellido</th>
+          <th>Nombre</th>
+          <th>Seña</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="
+            let dueno of duenos
+              | filterDueno
+                : {
+                    dni: dniFilter,
+                    Apellido: apellidoFilter,
+                    Nombre: nombreFilter,
+                    sena: senaFilter
+                  }
+          "
+        >
+          <td>{{ dueno.dni }}</td>
+          <td>{{ dueno.Apellido }}</td>
+          <td>{{ dueno.Nombre }}</td>
+          <td>{{ dueno.sena }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

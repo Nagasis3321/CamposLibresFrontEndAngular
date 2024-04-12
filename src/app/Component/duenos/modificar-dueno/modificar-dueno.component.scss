@@ -1,0 +1,51 @@
+.container {
+  @apply w-full h-fit flex flex-col 3xl:w-[1000px];
+}
+
+.container h1 {
+  @apply text-3xl font-bold border-b-2 w-fit;
+}
+
+.container h1 {
+  -webkit-text-stroke: 1px black;
+}
+
+.inputsForModify {
+  @apply flex flex-col gap-2 mb-12 mt-8 3xl:w-[1000px];
+}
+
+.inputsForModify input {
+  @apply text-black rounded-md text-lg;
+}
+
+.inputsForModify button {
+  @apply border-4 rounded-lg;
+}
+
+.inputsForModify button:hover {
+  @apply border-4 font-bold text-black  bg-stone-200;
+}
+
+.dataDueno p {
+  @apply text-white backdrop-blur-sm my-2 border-2 rounded-lg text-lg;
+}
+
+.DataFinded {
+  @apply border-green-400;
+}
+
+.newData {
+  @apply flex flex-col gap-2;
+}
+
+.newDatainput {
+  @apply text-black rounded-md text-lg;
+}
+
+.newData button {
+  @apply backdrop-blur-md rounded-lg  border-4;
+}
+
+.newData button:hover {
+  @apply border-4 font-bold text-black  bg-stone-200;
+}

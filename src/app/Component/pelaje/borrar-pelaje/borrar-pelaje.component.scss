@@ -1,0 +1,22 @@
+.container {
+  @apply w-3/4 h-fit flex flex-col   m-auto justify-center mt-10;
+}
+
+.container h1 {
+  @apply text-3xl border-b-2 font-bold mb-4 w-fit flex justify-start;
+}
+
+.container input {
+  @apply text-black  rounded-lg w-full text-lg;
+}
+
+.container button {
+  @apply backdrop-blur-md rounded-lg   font-bold w-fit p-4 m-auto border mt-5;
+}
+.container button:hover {
+  @apply font-bold text-black  bg-stone-200;
+}
+
+.error {
+  @apply text-[red] font-extrabold text-xl;
+}

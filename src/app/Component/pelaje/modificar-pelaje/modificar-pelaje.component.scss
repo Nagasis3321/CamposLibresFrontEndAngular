@@ -1,0 +1,51 @@
+.container {
+  @apply w-3/4 h-fit flex flex-col m-auto;
+}
+
+.container h1 {
+  @apply text-3xl font-bold border-b-2 w-fit;
+}
+
+.container h1 {
+  -webkit-text-stroke: 1px black;
+}
+
+.inputsForModify {
+  @apply flex flex-col gap-2 mb-12 mt-8 w-full;
+}
+
+.inputsForModify input {
+  @apply text-black rounded-md text-lg;
+}
+
+.inputsForModify button {
+  @apply backdrop-blur-md rounded-lg   font-bold w-fit p-4 m-auto border mt-5;
+}
+
+.inputsForModify button:hover {
+  @apply font-bold text-black  bg-stone-200;
+}
+
+.dataModify p {
+  @apply text-black bg-stone-200 my-2 border-2 rounded-lg text-lg pl-4 font-bold;
+}
+
+.DataFinded {
+  @apply border-green-400;
+}
+
+.newData {
+  @apply flex flex-col gap-2;
+}
+
+.newDatainput {
+  @apply text-black rounded-md text-lg;
+}
+
+.newData button {
+  @apply backdrop-blur-md rounded-lg   font-bold w-fit p-4 m-auto border mt-5;
+}
+
+.newData button:hover {
+  @apply font-bold text-black  bg-stone-200;
+}

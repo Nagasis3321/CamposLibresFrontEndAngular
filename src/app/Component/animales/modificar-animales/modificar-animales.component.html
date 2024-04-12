@@ -1,0 +1,74 @@
+<div class="container">
+  <h1>Modificacion Animal</h1>
+  <div class="inputsForModify">
+    <h2 class="title">Animal a modificar</h2>
+    <select
+      name=""
+      id=""
+      [(ngModel)]="duenoSelect"
+      (ngModelChange)="findAnimales()"
+    >
+      <option value=" "></option>
+      <option [ngValue]="dueno" *ngFor="let dueno of duenos">
+        {{ dueno.apellido }} {{ dueno.nombre }} | {{ dueno.dni }}
+      </option>
+    </select>
+
+    <select name="" id="" ngModel="newAnimal?">
+      <option value=""></option>
+      <option [ngValue]="animal" *ngFor="let animal of animalesFilter">
+        {{ animal.idPelaje | idtoDenominacion }} | {{ animal.caravana }}
+      </option>
+    </select>
+  </div>
+
+  <div class="newData">
+    <h1>Nuevos datos</h1>
+    <div class="new-Dueno">
+      <p>Dni:</p>
+
+      <select name="" id="" [disabled]="!dniCheckBox">
+        <option value=""></option>
+        <option value="" *ngFor="let dueno of duenos">
+          {{ dueno.apellido }} {{ dueno.nombre }} | {{ dueno.dni }}
+        </option>
+      </select>
+      <input type="checkbox" name="" id="" [(ngModel)]="dniCheckBox" />
+    </div>
+    <div class="new-Caravana">
+      <p>Caravana:</p>
+
+      <input
+        type="text"
+        placeholder="Nueva Caravana"
+        [disabled]="!caravanaCheckBox"
+        class="new-Caravana-Input"
+      />
+      <input
+        type="checkbox"
+        name=""
+        id=""
+        [(ngModel)]="caravanaCheckBox"
+        class="new-Caravana-Check"
+      />
+    </div>
+    <div class="new-Pelaje">
+      <p>Pelaje:</p>
+
+      <select
+        name=""
+        id=""
+        [(ngModel)]="newAnimal.idPelaje"
+        [disabled]="!pelajeCheckBox"
+      >
+        <option value=""></option>
+        <option value="pelaje.id" *ngFor="let pelaje of pelajes">
+          {{ pelaje.denominacion }}
+        </option>
+      </select>
+      <input type="checkbox" name="" id="" [(ngModel)]="pelajeCheckBox" />
+    </div>
+
+    <button>Modificar</button>
+  </div>
+</div>

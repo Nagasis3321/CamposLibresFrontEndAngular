@@ -1,0 +1,36 @@
+.container {
+  @apply w-3/4 h-fit flex flex-col    m-auto justify-center mt-10;
+}
+.inputs {
+  @apply grid grid-rows-2  gap-5 h-fit max-h-[400px];
+}
+.inputs h1 {
+  @apply text-3xl font-bold border-b-2 w-fit;
+}
+
+.inputs h1 {
+  -webkit-text-stroke: 1px black;
+}
+.inputs label {
+  @apply text-xl;
+}
+
+.inputs input {
+  @apply text-black text-lg  rounded-lg text-xl;
+}
+
+.inputs button {
+  @apply backdrop-blur-md rounded-lg   font-bold w-fit p-4 m-auto border;
+}
+
+.inputs button:hover {
+  @apply font-bold text-black  bg-stone-200;
+}
+
+.inputs select {
+  @apply text-black h-fit text-xl;
+}
+
+.errorText {
+  @apply text-red-500 font-bold text-xl;
+}

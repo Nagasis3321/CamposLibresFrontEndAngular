@@ -1,0 +1,22 @@
+.container {
+  @apply text-white w-full mx-auto flex flex-row h-fit;
+}
+
+.options {
+  @apply flex  gap-6 flex-col 3xl:min-w-[300px] 3xl:max-w-[500px] 3xl:m-3 3xl:mt-0 text-black items-center backdrop-blur-xl  pt-8 h-fit;
+}
+.title {
+  @apply text-6xl font-extrabold  border-b-4 w-fit font-mono p-4;
+}
+
+.options button {
+  @apply bg-stone-200 rounded-lg  border-2 border-black     text-xl min-w-40 max-w-52  flex items-center justify-center;
+}
+
+.componentActive {
+  @apply font-bold;
+}
+
+.viewComponent {
+  @apply w-full    h-full;
+}

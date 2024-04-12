@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="inputsForModify">
+    <h1 class="title">Dueno a modificar</h1>
+    <input
+      type="text"
+      placeholder="Denominacion pelaje"
+      [(ngModel)]="denominacionPelaje"
+    />
+    <p *ngIf="errorModifyPelaje" class="errorText">
+      {{ errorMensage }}
+    </p>
+    <button id="btn-modify" (click)="findPelaje()">Buscar</button>
+    <div class="dataModify">
+      <p
+        [ngClass]="{
+          pelajeFinded: pelajeFindedBoolean,
+          '': !pelajeFindedBoolean
+        }"
+      >
+        Id: {{ pelaje?.id }}
+      </p>
+      <p
+        [ngClass]="{
+          duenoFinded: pelajeFindedBoolean,
+          '': pelajeFindedBoolean
+        }"
+      >
+        Denominacion: {{ pelaje?.denominacion }}
+      </p>
+    </div>
+  </div>
+
+  <div class="newData">
+    <h1>Nuevos datos</h1>
+    <input type="text" placeholder="Denominacion" />
+    <button id="btn-modify">Guardar</button>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="optionFind">
+    <h1 class="titleOpciones">Opciones Busqueda</h1>
+    <input [(ngModel)]="dniFilter" placeholder="Dni" :first-child />
+    <select name="" id="" [(ngModel)]="pelajeFilter">
+      <option value="" selected></option>
+      <option *ngFor="let pelaje of pelajes" value="{{ pelaje.id }}">
+        {{ pelaje.denominacion }}
+      </option>
+    </select>
+    <input type="text" [(ngModel)]="caravanaFilter" placeholder="Caravana" />
+  </div>
+  <div class="tableData">
+    <table>
+      <thead>
+        <tr>
+          <th>Dni</th>
+          <th>Pelaje</th>
+          <th>Caravana</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="
+            let animal of animales
+              | filterAnimal
+                : {
+                    dni: dniFilter,
+                    pelaje: pelajeFilter,
+                    caravana: caravanaFilter
+                  }
+          "
+        >
+          <td>{{ animal.dniDueno }}</td>
+          <td>{{ animal.idPelaje | idtoDenominacion }}</td>
+          <td>{{ animal.caravana }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

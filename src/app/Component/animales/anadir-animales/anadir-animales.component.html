@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="inputs">
+    <h1 class="title">Crear Animal</h1>
+    <select name="" id="" [(ngModel)]="idPelajeNew">
+      <option *ngFor="let pelaje of pelajes" value="pelaje.id">
+        {{ pelaje.denominacion }}
+      </option>
+    </select>
+    <select name="" id="" [(ngModel)]="dniDuenoNew">
+      <option *ngFor="let dueno of duenos" value="dueno.dni">
+        {{ dueno.apellido }} {{ dueno.nombre }} | {{ dueno.dni }}
+      </option>
+    </select>
+    <input type="text" placeholder="Caravana" [(ngModel)]="caravanaNew" />
+    <p *ngIf="errorNewAnimal === true" class="errorText">{{ errorMensage }}</p>
+    <button id="btn-add" class="btn btn-primary">Nuevo</button>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="optionFind">
+    <h1 class="titleOpciones">Opciones Busqueda</h1>
+    <input
+      [(ngModel)]="denominacionFilter"
+      placeholder="Denominacion"
+      :first-child
+    />
+  </div>
+  <div class="tableData">
+    <table>
+      <thead>
+        <tr>
+          <th>Denominacion</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="
+            let pelaje of pelajes
+              | filterPelaje
+                : {
+                    denominacion: denominacionFilter
+                  }
+          "
+        >
+          <td>{{ pelaje.denominacion }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+.container {
+  @apply w-3/4 h-fit flex flex-col   m-auto justify-center mt-10;
+}
+.container h1 {
+  @apply text-3xl font-bold border-b-2 w-fit;
+}
+
+.container h1 {
+  -webkit-text-stroke: 1px black;
+}
+
+.optionFind input {
+  @apply m-4 mr-7 ml-0 text-black rounded-lg text-lg;
+}
+
+//Estilos Table
+.tableData {
+  @apply w-full h-fit;
+}
+
+.tableData table {
+  @apply w-full;
+}
+.tableData table,
+tr {
+  @apply border-solid border-4;
+}
+
+.tableData table thead tr th {
+  @apply border-solid border-4 py-2 px-6 bg-white text-black;
+}
+
+.tableData table tbody tr td {
+  @apply border-solid border-2 pt-1 text-black bg-gray-300 text-xl;
+}

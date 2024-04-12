@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="options">
+    <h1 class="title">Pelajes</h1>
+    <button
+      class=""
+      (click)="seleccionarComponente('new')"
+      [ngClass]="viewComponente === 'new' ? 'componentActive' : ''"
+    >
+      Crear
+    </button>
+    <button
+      class=""
+      (click)="seleccionarComponente('find')"
+      [ngClass]="viewComponente === 'find' ? 'componentActive' : ''"
+    >
+      Buscar
+    </button>
+    <button
+      class=""
+      (click)="seleccionarComponente('delete')"
+      [ngClass]="viewComponente === 'delete' ? 'componentActive' : ''"
+    >
+      Borrar
+    </button>
+    <button
+      class=""
+      (click)="seleccionarComponente('modify')"
+      [ngClass]="viewComponente === 'modify' ? 'componentActive' : ''"
+    >
+      Modificar
+    </button>
+  </div>
+
+  <div class="viewComponent">
+    <app-anadir-pelaje *ngIf="viewComponente === 'new'"></app-anadir-pelaje>
+
+    <app-borrar-pelaje *ngIf="viewComponente === 'delete'"></app-borrar-pelaje>
+    <app-buscar-pelaje *ngIf="viewComponente === 'find'"></app-buscar-pelaje>
+    <app-modificar-pelaje
+      *ngIf="viewComponente === 'modify'"
+    ></app-modificar-pelaje>
+  </div>
+</div>

@@ -1,0 +1,69 @@
+.container {
+  @apply w-3/4 h-fit flex flex-col m-auto;
+}
+
+.container h1 {
+  @apply text-3xl font-bold border-b-2 w-fit;
+}
+.container h2 {
+  @apply text-xl font-bold;
+}
+
+.inputsForModify {
+  @apply flex flex-col gap-2 mb-8 mt-8 w-full;
+}
+
+.inputsForModify select {
+  @apply text-black text-xl mt-2;
+}
+
+.newData {
+  @apply flex flex-col;
+}
+.newData input {
+  @apply text-black rounded-md text-lg;
+}
+
+.newDatainput select {
+  @apply text-black text-xl w-full;
+}
+
+.newData p {
+  @apply font-bold text-xl py-2;
+}
+
+//Dni nuevo Data
+.new-Dueno select {
+  @apply w-3/4 text-black text-xl;
+}
+
+.new-Dueno input {
+  @apply mx-4;
+}
+
+//Caravana nuevo Data
+.new-Caravana-Input {
+  @apply w-3/4 text-black text-xl;
+}
+
+.new-Caravana-Check {
+  @apply mx-4;
+}
+
+//Pelaje nuevo Data
+
+.new-Pelaje select {
+  @apply w-3/4 text-black text-xl;
+}
+
+.new-Pelaje input {
+  @apply mx-4;
+}
+
+.newData button {
+  @apply backdrop-blur-md rounded-lg   font-bold w-fit p-4 m-auto border mt-5;
+}
+
+.newData button:hover {
+  @apply font-bold text-black  bg-stone-200;
+}

@@ -1,0 +1,29 @@
+.container {
+  @apply w-full h-fit flex flex-col  3xl:w-[1000px];
+}
+
+.container h1 {
+  @apply text-3xl border-b-2 font-bold my-4;
+}
+
+.container h1 {
+  @apply text-3xl font-bold border-b-2 w-fit;
+}
+
+.container h1 {
+  -webkit-text-stroke: 1px black;
+}
+.container input {
+  @apply text-black  rounded-lg w-full text-lg;
+}
+
+.container button {
+  @apply backdrop-blur-md rounded-lg mt-5 3xl:h-9  font-bold;
+}
+.container button:hover {
+  @apply font-bold text-black  bg-stone-200;
+}
+
+.error {
+  @apply text-[red] font-extrabold text-xl;
+}
